@@ -1,12 +1,13 @@
 # My Portfolio & Dashboards 🚀
 
-Ini adalah project **Streamlit** yang menampilkan portfolio saya sekaligus fitur **Customer Churn Prediction**.  
+Ini adalah project **Streamlit** yang menampilkan portfolio saya sekaligus fitur **Dashboard Customer Insight**.  
 
 ---
 
 ## Tentang Project
 
-- **Portfolio**: Menampilkan informasi tentang saya, pengalaman kerja, dan proyek-proyek yang pernah dikerjakan.  
+- **Portfolio**: Menampilkan informasi tentang saya, pengalaman kerja, dan proyek-proyek yang pernah dikerjakan.
+- **Dashboard Streamlit**: Dashboard interaktif customer insights.   
 - **Prediction App**: Form interaktif untuk memprediksi apakah pelanggan akan churn atau tidak berdasarkan data input.  
 - **Teknologi**: Streamlit, Python, Pandas, NumPy, Scikit-learn, Plotly, Joblib  
 
@@ -18,19 +19,19 @@ Ini adalah project **Streamlit** yang menampilkan portfolio saya sekaligus fitur
    - Salam pembuka dan deskripsi singkat tentang saya  
 
 2. **About Me**  
-   - Perkenalan singkat: pengalaman kerja, skill, dan minat di bidang Data Science  
+   - Perkenalan singkat dan minat saya.
 
 3. **Projects**  
    - Menampilkan proyek yang pernah saya kerjakan, termasuk:  
      - Dunnhumby Customer Insight  
-     - Churn Analysis  
+     - Churn Analysis(on progress)
 
 4. **Predictions**  
    - Form interaktif untuk input data pelanggan  
-   - Menampilkan prediksi **Churn** dan **Probability** (jika model tersedia)  
+   - Menampilkan prediksi **Churn** dan **Probability** (jika model tersedia) (on progress) 
 
 5. **Kontak**  
-   - Informasi kontak: email, LinkedIn, dll  
+   - Informasi kontak: email, LinkedIn, GitHub  
 
 ---
 
