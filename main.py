@@ -29,7 +29,7 @@ if menu == "Home":
     st.title("Hello! 👋")
     st.subheader("Welcome to my portfolio")
     st.write("""
-    I am a big data analytics enthusiast with experience in data science, digital marketing, and SEO.  
+    My name is BQ Desy Hardianti. I am a big data analytics enthusiast with experience in data science, digital marketing, and SEO.  
     I work well independently or in teams, delivering professional, data-driven solutions.
     """)
 
