@@ -7,8 +7,8 @@ Ini adalah project **Streamlit** yang menampilkan portfolio saya sekaligus fitur
 ## Tentang Project
 
 - **Portfolio**: Menampilkan informasi tentang saya, pengalaman kerja, dan proyek-proyek yang pernah dikerjakan.
-- **Dashboard Streamlit**: Dashboard interaktif customer insights.   
-- **Prediction App**: Form interaktif untuk memprediksi apakah pelanggan akan churn atau tidak berdasarkan data input.  
+- **Dashboard Streamlit**: Dashboard interaktif customer insights **Dunnhumby Customer Insight**  
+- **Prediction App**: Form interaktif untuk memprediksi apakah pelanggan akan churn atau tidak berdasarkan data input. Menu ini belum berfungsi penuh.  
 - **Teknologi**: Streamlit, Python, Pandas, NumPy, Scikit-learn, Plotly, Joblib  
 
 ---
