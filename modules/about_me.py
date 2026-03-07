@@ -3,7 +3,7 @@ from PIL import Image
 
 def tentang_saya():
     # Load foto
-    image = Image.open("/Users/bqdesy/streamlit_project/images/DSC05557.jpg")  # ganti dengan nama file fotomu
+    image = Image.open("/Users/bqdesy/streamlit_project/images/hijab_work.jpg")
 
     # Buat layout 2 kolom
     col1, col2 = st.columns([1, 2])  # col1 untuk foto, col2 untuk teks

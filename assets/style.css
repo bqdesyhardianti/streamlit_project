@@ -1,0 +1,508 @@
+/* ========== VARIABLES ELEGAN ========== */
+:root {
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #141414;
+    --bg-card: #1A1A1A;
+    --accent-primary: #7C3AED;  /* Ungu royal elegan */
+    --accent-secondary: #10B981; /* Emerald untuk aksen, #9CA3AF; */
+    --accent-glow: rgba(124, 58, 237, 0.2);
+    --text-primary: #F9FAFB;
+    --text-secondary: #F9FAFB; 
+    --text-muted: #6B7280;
+    --border-color: #2D2D2D;
+    --border-hover: #404040;
+}
+
+/* ========== BACKGROUND & LAYOUT ========== */
+[data-testid="stAppViewContainer"], 
+[data-testid="stHeader"] {
+    background-color: var(--bg-primary) !important;
+}
+
+.stApp, .main, [data-testid="stAppViewContainer"] {
+    color: var(--text-primary) !important;
+}
+
+/* ========== SIDEBAR ELEGAN ========== */
+[data-testid="stSidebar"] {
+    background-color: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+[data-testid="stSidebar"] > div:first-child {
+    background-color: var(--bg-primary);
+}
+
+/* ========== SIDEBAR MENU ========== */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 6px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    margin: 2px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-secondary) !important;
+    background-color: transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* Hover effect - subtle */
+.sidebar-item:hover {
+    background-color: rgba(124, 58, 237, 0.08) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-hover);
+}
+
+/* Active state - elegan dengan accent color */
+.sidebar-item.active {
+    background: linear-gradient(90deg, rgba(124, 58, 237, 0.12), transparent);
+    color: var(--accent-primary) !important;
+    border-left: 3px solid var(--accent-primary);
+    font-weight: 600;
+}
+
+/* ========== PROFILE SECTION ========== */
+.sidebar-profile {
+    text-align: center;
+    padding: 20px 15px 25px 15px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+.sidebar-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--border-hover);
+    object-fit: cover;
+    object-position: top;
+    transition: border-color 0.3s ease;
+}
+
+.sidebar-profile img:hover {
+    border-color: var(--accent-primary);
+}
+
+.sidebar-profile h3 {
+    color: var(--text-primary);
+    margin: 15px 0 5px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.sidebar-profile p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ========== SOCIAL LINKS ========== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+
+.social-links a {
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(0.8);
+}
+
+/* ========== TOMBOL UTAMA ========== */
+.stButton > button {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, #8B5CF6 100%) !important;
+    color: white !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1.8rem !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2) !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.3px;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(124, 58, 237, 0.3) !important;
+    background: linear-gradient(135deg, #8B5CF6 0%, var(--accent-primary) 100%) !important;
+}
+
+/* Secondary button style */
+.stButton > button.secondary {
+    background: transparent !important;
+    border: 1px solid var(--border-hover) !important;
+    color: var(--text-secondary) !important;
+    box-shadow: none !important;
+}
+
+.stButton > button.secondary:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    background: transparent !important;
+}
+
+/* Disabled button */
+button:disabled {
+    background-color: var(--border-color) !important;
+    color: var(--text-muted) !important;
+    border: 1px solid var(--border-color) !important;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* ========== BACK BUTTON ========== */
+.stButton button[key*="Back"] {
+    background: var(--accent-primary) !important; /* ungu theme */
+    /* background: transparent !important; */
+    border: 1px solid var(--border-hover) !important;
+    color: var(--text-secondary) !important;
+    padding: 4px 14px !important;
+    font-size: 0.85rem !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+.stButton button[key*="Back"]:hover {
+    border-color: var(--accent-primary) !important;
+    color: var(--accent-primary) !important;
+    transform: translateX(-2px) !important;
+    background: transparent !important;
+}
+
+
+/* ========== PROJECT CARDS ELEGAN ========== */
+div.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+div.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-primary);
+    box-shadow: 0 20px 30px -10px rgba(124, 58, 237, 0.15);
+}
+
+/* Icon container */
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Category badge */
+.card-category {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: var(--accent-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+/* ===================== */
+/* PROFILE BOX STYLES */
+/* ===================== */
+
+.profile-box {
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.profile-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333333 !important;
+}
+
+.profile-detail {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    color: #333333 !important;
+}
+
+.profile-detail p, 
+.profile-detail strong,
+.profile-detail span {
+    color: #333333 !important;  /* HITAM */
+}
+
+.profile-tag {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #333333 !important;
+}
+
+/* Warna-warna box */
+.profile-super-loyal {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-left: 6px solid #2e7d32;
+}
+
+.profile-early-warning {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    border-left: 6px solid #f57c00;
+}
+
+.profile-high-risk {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-left: 6px solid #c62828;
+}
+
+.profile-lost {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    border-left: 6px solid #757575;
+}
+
+/* Teks warna */
+.text-green-dark {
+    color: #1b5e20;
+}
+
+.text-orange-dark {
+    color: #e65100;
+}
+
+.text-red-dark {
+    color: #b71c1c;
+}
+
+.text-gray-dark {
+    color: #424242;
+}
+
+/* Background transparan untuk info */
+.info-badge {
+    background: rgba(255,255,255,0.5);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    color: #333333 !important;
+}
+/* ========== FOTO PROFIL ========== */
+.profile-img-html {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid var(--border-hover);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.profile-img-html:hover {
+    border-color: var(--accent-primary);
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* ========== TYPOGRAPHY UTAMA ========== */
+.main-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.highlight {
+    color: var(--accent-primary);
+    background: linear-gradient(135deg, var(--accent-primary), #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========== METRIC CARDS ========== */
+[data-testid="stMetric"] {
+    background-color: var(--bg-card);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-muted) !important;
+    font-size: 0.85rem !important;
+    font-weight: 400 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text-primary) !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+}
+
+/* ========== DIVIDER ========== */
+hr, .stDivider {
+    border-color: var(--border-color) !important;
+    margin: 1.5rem 0 !important;
+}
+
+/* ========== SCROLLBAR MINIMAL ========== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+}
+
+/* ========== FORM ELEMENTS ========== */
+.stTextInput label, 
+.stSelectbox label,
+.stTextArea label {
+    color: var(--text-secondary) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+}
+
+.stTextInput > div > div > input,
+.stSelectbox > div > div,
+.stTextArea > div > div > textarea {
+    background-color: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stSelectbox > div > div:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 0 2px var(--accent-glow) !important;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.02em;
+}
+
+p, li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--accent-primary) !important;
+    text-decoration: none !important;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .profile-img-html {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .sidebar-item {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+    
+    div.project-card {
+        padding: 18px;
+    }
+}
