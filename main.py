@@ -171,7 +171,8 @@ elif st.session_state.page == "projects":
         navigate_callback=navigate_to,
         project_callbacks={
             "Dunnhumby Customer Insight": lambda: navigate_to("project_dunnhumby"),
-            "Churn Analysis": lambda: navigate_to("project_churn")
+            "Churn Analysis": lambda: navigate_to("project_churn"),
+            "Product Recommender System": lambda: navigate_to("project_prod_rec")
         }
     )
 
@@ -256,6 +257,41 @@ elif st.session_state.page == "project_churn":
     except FileNotFoundError as e:
         st.error(f"❌ Error: File model tidak ditemukan")
         st.info("Pastikan model ada di: `projects/churn_analysis/model/churn_model_final.pkl`")
+    except Exception as e:
+        st.error(f"❌ Error loading project: {e}")
+        st.exception(e)
+
+elif st.session_state.page == "project_prod_rec":
+    st.markdown("""
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <h1 style="margin: 0;"> 🛍️ Product Recommendation System </h1>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns([1, 8, 1])
+    with col1:
+        if st.button("← Back", help="Kembali ke Projects"):
+            navigate_to("projects")
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    try:
+        from projects.product_recommendation_system.view import run as prod_rec_run
+        prod_rec_run()
+    except ImportError as e:
+        st.error(f"❌ Error: Module tidak ditemukan")
+        st.info("Pastikan file ada di: `projects/product_recommendation_system/view.py`")
+        st.code("""
+        Struktur folder yang benar:
+        projects/
+        └── product_recommendation_system/
+            ├── view.py
+            └── model/
+                └── retail_hybrid_recommender_final.pkl
+        """)
+    except FileNotFoundError as e:
+        st.error(f"❌ Error: File model tidak ditemukan")
+        st.info("Pastikan model ada di: `projects/product_recommendation_system/model/retail_hybrid_recommender_final.pkl`")
     except Exception as e:
         st.error(f"❌ Error loading project: {e}")
         st.exception(e)

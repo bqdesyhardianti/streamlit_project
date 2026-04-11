@@ -19,6 +19,16 @@ projects = [
         "status": "Active",
         "icon": "🏦",
         "page": "project_churn"
+    },
+
+    {
+        "id": "prod_recom",
+        "title": "Product Recommender System",
+        "category": "Asssociation Rules",
+        "desc": "Giving personal & relevance product recommendation.",
+        "status": "Active",
+        "icon": "🏦",
+        "page": "project_prod_rec"
     }
 ]
 
