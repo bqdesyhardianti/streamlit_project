@@ -45,4 +45,5 @@ urllib3==2.6.3
 python-dotenv
 xgboost
 imbalanced-learn
-google-generativeai
+# google-generativeai
+google-genai
