@@ -25,8 +25,8 @@ FALLBACK_MODELS = [
     "gemini-2.5-flash-lite", # fallback 2
 ]
 
-MAX_RETRIES = 1
-RETRY_DELAY = 1
+MAX_RETRIES = 3
+RETRY_DELAY = 2
 
 
 def generate(
@@ -54,20 +54,12 @@ def generate(
         for attempt in range(1, MAX_RETRIES + 1):
 
             try:
-                print("MODEL:", model)
-                print("API KEY ADA:", GEMINI_API_KEY is not None)
-                print("SEBELUM GEMINI")
+
                 response = client.models.generate_content(
                     model=model,
                     contents=contents,
                     config=config,
                 )
-                print("SESUDAH GEMINI")
-                # response = client.models.generate_content(
-                #     model=model,
-                #     contents=contents,
-                #     config=config,
-                # )
 
                 text = getattr(response, "text", None)
 
@@ -75,17 +67,10 @@ def generate(
                     return text.strip()
 
                 return None
+
             except Exception as e:
 
-                print("="*50)
-                print("GEMINI ERROR:")
-                print(repr(e))
-                print(str(e))
-                print("="*50)
-
                 err_str = str(e)
-            # except Exception as e:
-            #     err_str = str(e)
 
                 is_503 = (
                     "503" in err_str
