@@ -46,4 +46,4 @@ python-dotenv
 xgboost
 imbalanced-learn
 # google-generativeai
-google-genai
+google-genai>=2.0.0
