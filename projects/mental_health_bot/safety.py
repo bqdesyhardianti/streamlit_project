@@ -2,6 +2,7 @@ from google.genai import types
 from .llm_call import generate
 from .config import GEMINI_MODEL
 
+
 CRISIS_ACTIVE = [
     "bunuh diri", "mau mati", "ingin mati",
     "mengakhiri hidup", "akhiri hidup", "akhirin hidup",

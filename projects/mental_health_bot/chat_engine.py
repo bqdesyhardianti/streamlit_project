@@ -3,7 +3,6 @@ from .extractor import extract_variables
 from .responder import generate_response, is_short_answer
 from .safety import check_safety, build_crisis_response
 
-
 def process_message(user_input, state):
 
     # turn count

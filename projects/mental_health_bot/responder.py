@@ -1,6 +1,5 @@
 from google.genai import types
 from .llm_call import generate
-
 # ══════════════════════════════════════════════════════════
 # WARAS v0.9 — Responder
 # Perubahan dari v0.8:

@@ -27,17 +27,8 @@ projects = [
         "category": "Asssociation Rules",
         "desc": "Giving personal & relevance product recommendation.",
         "status": "Active",
-        "icon": "🛍️ ",
+        "icon": "🏦",
         "page": "project_prod_rec"
-    },
-    {
-        "id": "mental_health_ai",
-        "title": "TemanAI",
-        "category": "Generative AI + ML",
-        "desc": "AI-powered mental health screening and support platform combining XGBoost, SHAP explainability, and Large Language Models.",
-        "status": "Active",
-        "icon": "🌱",
-        "page": "project_mental_health"
     }
 ]
 

@@ -1,7 +1,5 @@
 # projects/mental_health_bot/report_view.py
-
 import streamlit as st
-
 
 def render_report(
     phq9_score,

@@ -1,5 +1,6 @@
 # projects/mental_health_bot/feature_builder.py
 import pandas as pd
+
 FEATURE_COLUMNS = [
     "phq9_level",
     "overall_risk",

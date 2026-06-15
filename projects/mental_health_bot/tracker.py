@@ -1,5 +1,4 @@
 from .config import CONFIDENCE_THRESHOLD
-
 # ──────────────────────────────────────────
 # PENJELASAN STRUKTUR DATA
 #

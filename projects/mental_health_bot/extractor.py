@@ -4,7 +4,6 @@ from google.genai import types
 from .config import GEMINI_API_KEY, GEMINI_MODEL_FAST
 
 client = genai.Client(api_key=GEMINI_API_KEY)
-
 # ──────────────────────────────────────────
 # Extractor pakai GEMINI_MODEL_FAST (gemini-3.1-flash-lite)
 # karena tugasnya hanya output JSON terstruktur — tidak perlu

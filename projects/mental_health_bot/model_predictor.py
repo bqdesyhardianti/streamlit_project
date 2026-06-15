@@ -1,5 +1,6 @@
 import joblib
 
+
 MODEL_PATH = "projects/mental_health_bot/model/best_model.pkl"
 model = joblib.load(MODEL_PATH)
 
