@@ -298,14 +298,6 @@ elif st.session_state.page == "project_prod_rec":
         st.error(f"❌ Error loading project: {e}")
         st.exception(e)
 
-# try:
-#     from projects.mental_health_bot import view as mental_health_view
-#     mental_health_view.run()
-
-# except Exception as e:
-#     st.error(f"Error loading TemanAI: {e}")
-#     st.exception(e)
-
 
 # elif st.session_state.page == "project_mental_health":
 
