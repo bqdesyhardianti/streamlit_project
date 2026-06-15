@@ -25,8 +25,8 @@ FALLBACK_MODELS = [
     "gemini-2.5-flash-lite", # fallback 2
 ]
 
-MAX_RETRIES = 3
-RETRY_DELAY = 2
+MAX_RETRIES = 1
+RETRY_DELAY = 1
 
 
 def generate(
