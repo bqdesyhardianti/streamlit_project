@@ -54,7 +54,8 @@ def generate(
         for attempt in range(1, MAX_RETRIES + 1):
 
             try:
-
+                print("MODEL:", model)
+                print("API KEY ADA:", GEMINI_API_KEY is not None)
                 response = client.models.generate_content(
                     model=model,
                     contents=contents,
@@ -67,10 +68,17 @@ def generate(
                     return text.strip()
 
                 return None
-
             except Exception as e:
 
+                print("="*50)
+                print("GEMINI ERROR:")
+                print(repr(e))
+                print(str(e))
+                print("="*50)
+
                 err_str = str(e)
+            # except Exception as e:
+            #     err_str = str(e)
 
                 is_503 = (
                     "503" in err_str

@@ -12,6 +12,8 @@ if not GEMINI_API_KEY:
 GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_MODEL_FAST = "gemini-2.5-flash-lite"
 
+
+
 CONFIDENCE_THRESHOLD = 0.50
 
 # import os
