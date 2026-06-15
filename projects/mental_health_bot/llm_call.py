@@ -56,11 +56,18 @@ def generate(
             try:
                 print("MODEL:", model)
                 print("API KEY ADA:", GEMINI_API_KEY is not None)
+                print("SEBELUM GEMINI")
                 response = client.models.generate_content(
                     model=model,
                     contents=contents,
                     config=config,
                 )
+                print("SESUDAH GEMINI")
+                # response = client.models.generate_content(
+                #     model=model,
+                #     contents=contents,
+                #     config=config,
+                # )
 
                 text = getattr(response, "text", None)
 
