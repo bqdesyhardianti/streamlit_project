@@ -298,6 +298,14 @@ elif st.session_state.page == "project_prod_rec":
         st.error(f"❌ Error loading project: {e}")
         st.exception(e)
 
+# try:
+#     from projects.mental_health_bot import view as mental_health_view
+#     mental_health_view.run()
+
+# except Exception as e:
+#     st.error(f"Error loading TemanAI: {e}")
+#     st.exception(e)
+
 
 # elif st.session_state.page == "project_mental_health":
 
@@ -322,29 +330,29 @@ elif st.session_state.page == "project_prod_rec":
 
 #     mental_health_view.run()
 
-# elif st.session_state.page == "project_mental_health":
+elif st.session_state.page == "project_mental_health":
 
-#     st.markdown("""
-#     <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-#         <h1 style="margin: 0;"> 🌱 TemanAI Mental Health Assistant </h1>
-#     </div>
-#     """, unsafe_allow_html=True)
+    st.markdown("""
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+        <h1 style="margin: 0;"> 🌱 TemanAI Mental Health Assistant </h1>
+    </div>
+    """, unsafe_allow_html=True)
 
-#     col1, col2, col3 = st.columns([1, 8, 1])
+    col1, col2, col3 = st.columns([1, 8, 1])
 
-#     with col1:
-#         if st.button("← Back", help="Kembali ke Projects"):
-#             navigate_to("projects")
+    with col1:
+        if st.button("← Back", help="Kembali ke Projects"):
+            navigate_to("projects")
 
-#     st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True)
 
-#     try:
-#         from projects.mental_health_bot import view as mental_health_view
-#         mental_health_view.run()
+    try:
+        from projects.mental_health_bot import view as mental_health_view
+        mental_health_view.run()
 
-#     except Exception as e:
-#         st.error(f"Error loading TemanAI: {e}")
-#         st.exception(e)
+    except Exception as e:
+        st.error(f"Error loading TemanAI: {e}")
+        st.exception(e)
 # -----------------------------
 # 9. FOOTER
 # -----------------------------
